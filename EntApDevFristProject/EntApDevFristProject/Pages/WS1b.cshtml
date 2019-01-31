@@ -1,0 +1,29 @@
+﻿@page
+@model EntApDevFristProject.Pages.WS1bModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+        Layout = null;
+    }
+
+    <!DOCTYPE html>
+
+    <html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>WS1b</title>
+    </head>
+    <body>
+        <form method="Post">
+
+            <label for="n1">Number1</label>
+            <input type="number" id="n1" name="number1" />
+            <label for="n1">Number2</label>
+            <input type="number" id="n2" name="number2" />
+            <button type="submit">Press Here</button>
+        </form>
+
+        
+
+        <h1>@Model.Message</h1>
+    </body>
+</html>

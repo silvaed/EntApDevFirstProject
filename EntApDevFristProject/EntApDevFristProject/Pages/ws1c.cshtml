@@ -1,0 +1,35 @@
+﻿@page
+@model EntApDevFristProject.Pages.ws1cModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ws1c</title>
+</head>
+<body>
+    <form method="Post">
+
+        <label for="n1">Number1</label>
+        <input type="number" id="n1" name="number1" />
+        <label for="n1">Number2</label>
+        <input type="number" id="n2" name="number2"  />
+        <label for="sum">Add</label>
+        <input type="radio" id="sum" name="op" value="1" checked />
+        <label for="sub">Subtract</label>
+        <input type="radio" id="sub" name="op" value="2" />
+        <label for="mult">Multiply</label>
+        <input type="radio" id="mult" name="op" value="3" />
+        <label for="div">Divide</label>
+        <input type="radio" id="div" name="op" value="4" />
+        <button type="submit">Press Here</button>
+    </form>
+
+    <h1>@Model.Result</h1>
+</body>
+</html>

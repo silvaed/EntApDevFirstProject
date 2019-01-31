@@ -1,0 +1,30 @@
+﻿@page
+@model EntApDevFristProject.Pages.Page1Model
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Page1</title>
+</head>
+<body>
+    <h1>Hello World From a cshtml</h1>
+    <h1>@Model.Message</h1>
+
+    <form method="post">
+
+        <label for="number1">Number 1</label>
+        <input  id="number1" name="number" value=@Model.Number />
+
+        <button type="submit">Press Me to see what happens</button>
+
+    </form>
+
+
+</body>
+</html>

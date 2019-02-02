@@ -1,35 +1,36 @@
 ﻿@page
 @model EntApDevFristProject.Pages.ws1Model
-@addTagHelper*, Microsoft.AspNetCore.Mvc.TagHelpers
-    @{
-        Layout = null;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ws1</title>
+</head>
+<body>
+    @foreach (string country in Model.MyTestArray)
+    {
+        <ul>
+            <li>@country</li>
+        </ul>
+
     }
 
-    <!DOCTYPE html>
+    <form method="Post">
 
-    <html>
-    <head>
-        <meta name="viewport" content="width=device-width" />
-        <title>ws1</title>
-    </head>
-    <body>
-        @foreach (string country in Model.MyTestArray)
-        {
-            <ul>
-                <li>@country</li>
-            </ul>
+        <label for="n">Enter Your Name</label>
+        <input type="text" id="n" name="myname" />
+        <button type="submit">Press Here</button>
+    </form>
 
-        }
-
-        <form method="Post">
-
-            <label for="n">Enter Your Name</label>
-            <input type="text" id="n" name="myname" />
-            <button type="submit">Press Here</button>
-        </form>
-
-        <h1>@Model.Message</h1>
+    <h1>@Model.Message</h1>
 
 
-    </body>
+</body>
 </html>
